@@ -1,0 +1,45 @@
+thẻ mở và đóng trong php là <?php và ?>
+xuất ra màn hình bằng lệnh   echo "nội dung xuất ra màn hình";
+1 file php phải đặt trong htdocs của xampp
+2 chuyển đường dẫn trên ổ đĩa thành đường dẫn url để chạy trong trình duyệt
+
+hàm var_dump để kiểm tra dữ liệu của biến
+***
+Trong php cta có thể sd nháy kép hay nhát đơn để chứa  1 chuỗi
+điều gì xả tra khi bản thân chuỗi chứa nháy đơn:
+c1: dùng nháy đơn chứa nháy kép
+c2: dùng dấu escape \ 
+có thể sử dụng thẻ html bên trong chuỗi
+------Các kiểu dữ liệu trong php:
+1  kiểu INT( kiểu số nguyên) $number = 12;
+2 kiểu FLOAT(kiểu số thực) $total = 10,5;
+3 kiểu STRING (kiểu chuỗi) $name = "vũ mạnh cường"
+   nếu dùng dấu nháy đơn sẽ không thêm được biến vào trong chuỗi mà cần dùng nháy kép mới thêm được  VD: $name = "vũ mạnh cường ($number)";
+4 kiểu ARRAY(kiểu mảng) 
+  VD: $box = ["sp1","sp2","sp3","sp4"];
+echo $box[2]; ---> in ra sp3
+  chỉ số cho các phần tử bắt đầu là 0 kết thúc là n-1 trong đó:
+     n là tổng số phần tử và đây là kiểu chỉ mục
+---- kiểu mảng kết hợp giữa key và value
+ VD: $infor = [
+         'name' => "vũ mạnh cường",
+         'age'  => 25,
+         'level' => "junior",
+         'domain' => "vmcuong1202.com"
+    ];
+echo $infor[age];----> in ra 25
+...Muốn thay đổi giá trị của key ta chỉ cần gán giá trị mới và in ra như bình thường 
+ VD: $infor['level'] = "senior"
+     echo $infor['level'];----> màn hình sẽ in ra giá trị mới là senior nhưng không xóa đi giá trị cũ
+-Có thể thêm 1 hoặc nhiều các phần tử vào mảng
+-Để xem cấu trúc của mảng tốt nhất chúng ta dùng cách này:
+    echo '<pre>';
+    print_r($tên mảng);
+    echo '<pre/>';
+-Vòng lặp foreach có cú pháp là:
+    foreach($mảng as $chỉ số => $value){
+       //code thực thi 
+    }
+với mảng là tên mảng đang chạy
+chỉ số là chỉ số phần tử của các phần tử có trong mảng
+value là các giá trị có trong mảng
